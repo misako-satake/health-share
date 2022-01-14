@@ -1,0 +1,33 @@
+@charset "UTF-8";
+body{
+	background-color:#001e43;
+	margin-left:20px;
+	margin-top:20px;
+	
+}
+
+h1{
+	color:#e6e6cf;
+	font-family:HiraMinProN-W6;
+	text-align:  center;
+}
+h2{
+	color:#e6e6cf;
+	font-family:HiraMinProN-W6;
+	text-align:  center;
+}
+.grouptopmessage{
+	color:#e6e6cf;
+	font-family:HiraMinProN-W6;
+	margin : 0 auto;
+	text-align:  center;
+}
+button.btn{
+	color:#33331b;
+	border-color:#33331b;
+	font-family:HiraMinProN-W6;
+}
+button.btn-light{
+	background-color:#5f9ea0;
+	text-align:  center;
+}

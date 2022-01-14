@@ -1,0 +1,26 @@
+@charset "UTF-8";
+body{
+	background-color:#e6e68a;
+	color:#33331b;
+	margin-top:20px;
+	margin-left:20px;
+	font-family:HiraMinProN-W6;
+}
+h1{
+	text-align:  center;
+}
+span.formgroup{
+	margin:10px;
+}
+input.formgroup{
+	margin:10px;
+	border:none;
+	
+}
+button.btn-light{
+	background-color:#5f9ea0;
+	border-color:#33331b;
+	text-align:  center;
+}
+
+

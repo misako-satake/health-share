@@ -1,0 +1,36 @@
+@charset "UTF-8";
+body{
+	background-color:#001e43;
+	margin-left:20px;
+	margin-top:20px;
+}
+span.formgroup{
+	margin:10px;
+}
+input.formgroup{
+	margin:10px;
+	border:none;
+	
+}
+
+h1{
+	color:#e6e6cf;
+	font-family:HiraMinProN-W6;
+	text-align:  center;
+}
+h3{
+	color:#e6e6cf;
+	font-family:HiraMinProN-W6;
+}
+
+button.btn-light{
+	background-color:#5f9ea0;
+	border-color:#33331b;
+	text-align:  center;
+}
+table{
+	color:#e6e6cf;
+	font-family:HiraMinProN-W6;
+}
+
+
