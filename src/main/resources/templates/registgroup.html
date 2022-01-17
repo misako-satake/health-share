@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+
+<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+ 	 <link rel="stylesheet" th:href="@{/forregistuser.css}">
+ 	 
+<title>グループを作る</title>
+<body>
+<form th:action="@{/user/toToppage}">
+<button type="submit" class="btn btn-light">トップに戻る</button>
+</form>
+
+<h1>ユーザー登録</h1>
+
+<form th:action="@{/group/createGroup}">
+<div th:text="${session.userabsence}"></div>
+<table>
+	<tr><td><span class="formgroup">グループID：</span></td><td><input type="text" class="formgroup" name="groupName"></td></tr>
+	<tr><td><span class="formgroup">作成者名：</span></td><td><input type="text" class="formgroup" name="userName"></td></tr>
+	<tr><td></td><td><button type="submit" class="btn btn-light">作成/追加</button></td></tr>
+</table>
+</form>
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.Repository.GroupMapper">
+
+	<resultMap type="com.example.demo.Domain.User" id="userMap">
+		<id column="u_id" property="uId"></id>
+		<result column="user_name" property="userName"/>
+		<result column="target_weight" property="targetWeight"/>
+		<result column="carent_weight" property="carentWeight"/>
+		<result column="target_date" property="targetDate"/>
+	</resultMap>
+	
+	<resultMap type="com.example.demo.Domain.GroupId" id="groupIdMap">
+		<id column="g_id" property="gId"></id>
+		<result column="group_name" property="groupName"/>
+	</resultMap>
+	
+	<resultMap type="com.example.demo.Domain.UserGroupIds" id="userGroupIdMap">
+		<result column="j_user_id" property="jUserId"/>
+		<result column="j_group_id" property="jGroupId"/>
+	</resultMap>
+
+
+	<insert id="insertUser">
+		insert into users(user_name,target_weight,carent_weight,target_date)
+		values(#{userName},#{targetWeight},#{carentWeight},#{targetDate});
+	</insert>
+	<insert id="insertGroupId">
+		insert into group_id(group_name)
+		values(#{groupName});
+	</insert>
+	<insert id="insertJuncUserGoupId">
+		insert into users_group_ids(j_user_id,j_group_id)
+		values(#{jUserId},#{jGroupId})
+	</insert>
+	
+	
+	<select id="selectUserId" resultMap="userMap">
+		select u_id from users where user_name=#{userName};
+	</select>
+	<select id="selectGroupId" resultMap="groupIdMap">
+		select g_id from group_id where group_name=#{groupName};
+	</select>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</mapper>
