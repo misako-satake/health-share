@@ -3,22 +3,22 @@ CREATE DATABASE hsdb;
 
 
 CREATE TABLE users(
-u_id serial,
-group_id INTEGER UNIQUE,
+u_id serial primary key,
 user_name text NOT NULL UNIQUE,
 target_weight REAL NOT NULL,
-carent_weight REAL NOT NULL
+carent_weight REAL NOT NULL,
+target_date Date
 );
 
 CREATE TABLE group_id(
-g_id INTEGER NOT NULL UNIQUE,
-group_name text NOT NULL
+g_id serial primary key,
+group_name text NOT NULL UNIQUE
 );
 
-CREATE TABLE user_group_ids(
+CREATE TABLE users_group_ids(
 j_user_id INTEGER,
 j_group_id INTEGER,
-foreign key (j_user_id) references users(group_id),
+foreign key (j_user_id) references users(u_id),
 foreign key (j_group_id) references group_id(g_id)
 );
 

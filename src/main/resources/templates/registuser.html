@@ -5,19 +5,22 @@
 
 <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
- 	 <link rel="stylesheet" href="../static/forregistuser.css">
+ 	 <link rel="stylesheet" th:href="@{/forregistuser.css}">
  	 
 <title>ユーザー登録画面</title>
 <body>
+<form th:action="@{/user/toToppage}">
+<button type="submit" class="btn btn-light">トップに戻る</button>
+</form>
+
 <h1>ユーザー登録</h1>
 
-<form>
+<form th:action="@{/user/regist}">
 <table>
-	<tr><td><span class="formgroup">名前：</span></td><td><input type="text" class="formgroup"></td></tr>
-	<tr><td><span class="formgroup">現在の体重：</span></td><td><input type="text" class="formgroup"></td></tr>
-	<tr><td><span class="formgroup">目標の体重：</span></td><td><input type="text" class="formgroup"></td></tr>
-	<tr><td><span class="formgroup">目標の日付：</span></td><td><input type="text" class="formgroup"></td></tr>
-	<tr><td><span class="formgroup">ホストグループID：</span></td><td><input type="text" class="formgroup"></td></tr>
+	<tr><td><span class="formgroup">名前：</span></td><td><input type="text" class="formgroup" name="userName"></td></tr>
+	<tr><td><span class="formgroup">現在の体重：</span></td><td><input type="text" class="formgroup" name="carentWeight"></td></tr>
+	<tr><td><span class="formgroup">目標の体重：</span></td><td><input type="text" class="formgroup" name="targetWeight"></td></tr>
+	<tr><td><span class="formgroup">目標の日付：</span></td><td><input type="date" class="formgroup" name="targetDate"></td></tr>
 	<tr><td></td><td><button type="submit" class="btn btn-light">登録</button></td></tr>
 </table>
 </form>
